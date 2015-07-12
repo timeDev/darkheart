@@ -4,7 +4,7 @@
   "description": "Browser game engine",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/timeDev/darkheart/issues"
   },
-  "homepage": "https://github.com/timeDev/darkheart#readme"
+  "homepage": "https://github.com/timeDev/darkheart#readme",
+  "devDependencies": {
+    "browserify": "^10.2.6",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
 }
