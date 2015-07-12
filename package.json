@@ -1,0 +1,26 @@
+{
+  "name": "darkheart",
+  "version": "0.0.1",
+  "description": "Browser game engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timeDev/darkheart.git"
+  },
+  "keywords": [
+    "game",
+    "engine",
+    "browser",
+    "physics",
+    "webgl"
+  ],
+  "author": "Oskar Homburg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timeDev/darkheart/issues"
+  },
+  "homepage": "https://github.com/timeDev/darkheart#readme"
+}
