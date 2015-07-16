@@ -28,5 +28,11 @@
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
     "should": "^7.0.2"
+  },
+  "dependencies": {
+    "lodash": "^3.10.0"
+  },
+  "bin": {
+    "dhsc": "./bin/dhsc-repl"
   }
 }

@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var dhsc = require('../src/script/dhsc');
+
+var env = require('../src/script/stdenv')();
+
+function handleInput(input) {
+    try {
+        var tokens = dhsc.tokenize(input);
+        var expr = dhsc.readFromTokens(tokens);
+        var res = dhsc.evaluate(expr, env);
+        console.log(res);
+        return true;
+    } catch (e) {
+        console.error(e.stack);
+        return false;
+    }
+}
+
+if (process.argv.length > 1) {
+    handleInput(process.argv.slice(2)
+        .join(" "));
+} else {
+    var input = "";
+    process.stdin.on('data', function(d) {
+        input += d;
+    });
+
+    process.stdin.on('end', function() {
+        var success = handleInput(input);
+        process.exit(success ? 0 : 1);
+    });
+}
